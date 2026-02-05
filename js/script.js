@@ -1,4 +1,3 @@
-
 // DOM Elements
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
@@ -12,24 +11,50 @@ const faqQuestions = document.querySelectorAll('.faq-question');
 const contactForm = document.getElementById('contactForm');
 const quoteForm = document.getElementById('quoteForm');
 
-// Mobile Menu Toggle
-menuToggle.addEventListener('click', () => {
+// Create overlay for mobile menu
+const navOverlay = document.createElement('div');
+navOverlay.className = 'nav-overlay';
+document.body.appendChild(navOverlay);
+
+// Mobile Menu Toggle - SINGLE VERSION (remove duplicates)
+menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     navMenu.classList.toggle('active');
+    navOverlay.classList.toggle('active');
     menuToggle.innerHTML = navMenu.classList.contains('active') 
         ? '<i class="fas fa-times"></i>' 
         : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking overlay
+navOverlay.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    navOverlay.classList.remove('active');
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
 });
 
 // Close mobile menu when clicking a link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
         menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
         
         // Update active nav link
         navLinks.forEach(item => item.classList.remove('active'));
         link.classList.add('active');
     });
+});
+
+// Close mobile menu when clicking outside (for mobile only)
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    }
 });
 
 // Set current year in footer
@@ -53,8 +78,12 @@ function showTestimonial(index) {
     });
     
     // Show selected testimonial
-    testimonials[index].classList.add('active');
-    testimonialDots[index].classList.add('active');
+    if (testimonials[index]) {
+        testimonials[index].classList.add('active');
+    }
+    if (testimonialDots[index]) {
+        testimonialDots[index].classList.add('active');
+    }
     currentTestimonial = index;
 }
 
@@ -85,13 +114,13 @@ testimonialDots.forEach(dot => {
 });
 
 // Auto-advance testimonials every 5 seconds
-setInterval(() => {
-    if (testimonials.length > 0) {
+if (testimonials.length > 0) {
+    setInterval(() => {
         let nextIndex = currentTestimonial + 1;
         if (nextIndex >= testimonials.length) nextIndex = 0;
         showTestimonial(nextIndex);
-    }
-}, 5000);
+    }, 5000);
+}
 
 // FAQ Accordion
 faqQuestions.forEach(question => {
@@ -112,7 +141,6 @@ if (contactForm) {
         const message = document.getElementById('message').value;
         
         if (name && email && message) {
-            // In a real application, you would send this data to a server
             alert('Thank you for your message! We will get back to you soon.');
             contactForm.reset();
         } else {
@@ -132,7 +160,6 @@ if (quoteForm) {
         const industry = document.getElementById('quote-industry').value;
         
         if (name && email && business && industry) {
-            // In a real application, you would send this data to a server
             alert('Thank you for your quote request! We will send you a detailed quote within 24 hours.');
             quoteForm.reset();
         } else {
@@ -203,56 +230,12 @@ window.addEventListener('popstate', () => {
     }
 });
 
-
-
-// Create overlay for mobile menu
-const navOverlay = document.createElement('div');
-navOverlay.className = 'nav-overlay';
-document.body.appendChild(navOverlay);
-
-// Mobile Menu Toggle - FIXED
-menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navMenu.classList.toggle('active');
-    navOverlay.classList.toggle('active');
-    menuToggle.innerHTML = navMenu.classList.contains('active') 
-        ? '<i class="fas fa-times"></i>' 
-        : '<i class="fas fa-bars"></i>';
-});
-
-// Close mobile menu when clicking overlay
-navOverlay.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    navOverlay.classList.remove('active');
-    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-});
-
-// Close mobile menu when clicking a link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navOverlay.classList.remove('active');
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-        
-        // Update active nav link
-        navLinks.forEach(item => item.classList.remove('active'));
-        link.classList.add('active');
-    });
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('active')) {
+// Handle window resize to close mobile menu when switching to desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        // Close mobile menu when resizing to desktop
         navMenu.classList.remove('active');
         navOverlay.classList.remove('active');
         menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     }
 });
-
-// Set current year in footer
-if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-}
-
-// Rest of your existing JavaScript remains the same...
-// (Testimonials slider, FAQ accordion, form handlers, etc.)

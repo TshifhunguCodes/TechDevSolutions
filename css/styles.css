@@ -341,10 +341,12 @@ img {
         z-index: 1001;
         gap: 0;
         overflow-y: auto;
+        display : none;
     }
     
     .nav-menu.active {
         right: 0;
+        display: flex;
     }
     
     .nav-menu li {
