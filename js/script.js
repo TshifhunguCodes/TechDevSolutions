@@ -202,3 +202,57 @@ window.addEventListener('popstate', () => {
         }
     }
 });
+
+
+
+// Create overlay for mobile menu
+const navOverlay = document.createElement('div');
+navOverlay.className = 'nav-overlay';
+document.body.appendChild(navOverlay);
+
+// Mobile Menu Toggle - FIXED
+menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+    menuToggle.innerHTML = navMenu.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking overlay
+navOverlay.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    navOverlay.classList.remove('active');
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        
+        // Update active nav link
+        navLinks.forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+});
+
+// Set current year in footer
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
+// Rest of your existing JavaScript remains the same...
+// (Testimonials slider, FAQ accordion, form handlers, etc.)
