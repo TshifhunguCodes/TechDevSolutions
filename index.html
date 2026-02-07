@@ -3,269 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechDev Solutions - Professional Websites for Local Businesses</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>TechDev | Premium Web Development</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
+    <!-- Header & Navigation -->
+    <header>
         <div class="container">
-            <nav class="navbar">
+            <nav>
                 <a href="index.html" class="logo">
-                    <span class="logo-icon">💻</span>
-                    <span class="logo-text">TechDev <span class="logo-highlight">Solutions</span></span>
+                    <i class="fas fa-code logo-icon"></i> TechDev
                 </a>
                 
-                <button class="menu-toggle" id="menuToggle">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="customers.html">Customers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <button class="nav-cta">Start a Project</button>
+                
+                <button class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="packages.html" class="nav-link">Packages</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="contact.html#quote" class="btn btn-primary nav-btn">Get Quote</a></li>
-                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Full-Screen Video -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Professional Websites for <span class="text-highlight">Local Businesses</span></h1>
-                    <p class="hero-description">We create affordable, modern websites that help local businesses establish their online presence, attract more customers, and grow their revenue.</p>
-                    <div class="hero-buttons">
-                        <a href="packages.html" class="btn btn-primary btn-large">View Our Packages</a>
-                        <a href="contact.html" class="btn btn-secondary btn-large">Contact Us</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-laptop-code"></i>
-                        <div class="floating-elements">
-                            <div class="floating-element" style="top: 20%; left: 10%;">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="floating-element" style="top: 60%; right: 15%;">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                            <div class="floating-element" style="bottom: 20%; left: 20%;">
-                                <i class="fas fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-video-container">
+            <div class="hero-video-overlay"></div>
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="/assets/videos/14522339_3840_2160_25fps.mp4" type="video/mp4">
+            </video>
         </div>
+        
+        <div class="hero-content">
+            <h1>Crafting Digital Experiences for Modern Businesses</h1>
+            <p>We design and develop premium websites that elevate your brand, engage your audience, and drive measurable results.</p>
+            <a href="contact.html" class="hero-cta">
+                Start Your Project
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <div class="scroll-indicator">Scroll to Explore</div>
     </section>
 
-    <!-- Features Section -->
-    <section class="section features">
+    <!-- Floating Cards Section -->
+    <section class="floating-cards">
         <div class="container">
-            <div class="section-header">
-                <h2>Why Choose <span class="text-highlight">TechDev Solutions</span>?</h2>
-                <p>We specialize in creating websites that work for local businesses</p>
-            </div>
+            <h2 class="section-title" id="portfolio">Our Digital Creations</h2>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-dollar-sign"></i>
+            <div class="cards-container">
+                <div class="floating-card card-1">
+                    <div class="card-content">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Affordable Pricing</h3>
-                    <p>Packages designed specifically for local business budgets with no hidden fees.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
+                <div class="floating-card card-2">
+                    <div class="card-content">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Mobile Responsive</h3>
-                    <p>All websites look great on phones, tablets, and desktop computers.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
+                <div class="floating-card card-3">
+                    <div class="card-content">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <h3>Fast Turnaround</h3>
-                    <p>Get your website up and running in as little as 1-2 weeks.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
+                <div class="floating-card card-4">
+                    <div class="card-content">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>SEO Optimized</h3>
-                    <p>Built to rank well on Google so customers can find you easily.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Ongoing Support</h3>
-                    <p>We're here to help after your website launches with updates and maintenance.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Custom Design</h3>
-                    <p>Unique designs that reflect your brand, not generic templates.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
-            <div class="section-header">
-                <h2>What Our <span class="text-highlight">Clients Say</span></h2>
-                <p>Local businesses who have grown with our websites</p>
-            </div>
+            <h2 class="section-title">Our Services</h2>
             
-            <div class="testimonials-slider" id="testimonialsSlider">
-                <div class="testimonial-card active">
-                    <div class="testimonial-content">
-                        <p>"TechDev Solutions created a beautiful website for my bakery. We've seen a 40% increase in online orders since launching!"</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Sweet Treats Bakery</p>
-                        </div>
-                    </div>
+                    <h3>Premium Web Design</h3>
+                    <p>Custom, visually stunning designs that reflect your brand identity and create memorable user experiences. We create modern layouts inspired by leading global platforms.</p>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"As a small plumbing business, I needed a professional website. TechDev delivered exactly what I needed at a great price."</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Mike Rodriguez</h4>
-                            <p>QuickFix Plumbing</p>
-                        </div>
-                    </div>
+                    <h3>Web Development</h3>
+                    <p>High-performance, responsive websites built with modern technologies and optimized for speed and SEO. We ensure your site works perfectly across all devices.</p>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Our yoga studio website is beautiful and easy to update. The team was responsive and understood exactly what we wanted."</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                       <img 
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Lisa Chen</h4>
-                            <p>Serenity Yoga Studio</p>
-                        </div>
-                    </div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>Full-featured online stores with secure payment processing, inventory management, and conversion optimization to grow your online business.</p>
                 </div>
             </div>
-            
-            <div class="slider-controls">
-                <button class="slider-btn prev" id="prevTestimonial">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="slider-dots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
-                    <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- 3D Particle Globe Section -->
+    <section class="globe-section" id="global">
+        <div class="globe-container" id="particles-globe"></div>
+        
+        <div class="container">
+            <div class="globe-content">
+                <h2>Global Digital Presence</h2>
+                <p>We create digital solutions that transcend borders, connecting businesses with audiences worldwide. Our work spans continents, cultures, and markets, delivering exceptional results for clients across the globe.</p>
+                <p>With a network of partners and a deep understanding of international markets, we help businesses establish a powerful digital footprint that drives growth and fosters meaningful connections.</p>
+                
+                <div class="globe-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
                 </div>
-                <button class="slider-btn next" id="nextTestimonial">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta">
+    <section class="cta-section" id="contact">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Grow Your Business Online?</h2>
-                <p>Get a free consultation and quote for your custom website today.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Get Started</a>
-                    <a href="packages.html" class="btn btn-secondary btn-large">View Packages</a>
-                </div>
+                <h2 class="cta-title">Ready to Elevate Your Digital Presence?</h2>
+                <p class="cta-subtitle">Your website is often the first impression of your business. Let's create something remarkable together.</p>
+                <button class="cta-button">
+                    Book a Consultation
+                    <i class="fas fa-calendar-alt"></i>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <a href="index.html" class="logo footer-logo">
-                        <span class="logo-icon">💻</span>
-                        <span class="logo-text">TechDev <span class="logo-highlight">Solutions</span></span>
-                    </a>
-                    <p>Creating professional, affordable websites for local businesses to help them succeed online.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo">TechDev</a>
+                    <p class="footer-tagline">Crafting premium digital experiences for forward-thinking businesses since 2020.</p>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
+                <div class="footer-column">
+                    <h4>Services</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Web Design</a></li>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">E-Commerce</a></li>
+                        <li><a href="services.html">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="customers.html">Portfolio</a></li>
+                        <li><a href="about.html">Process</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Our Services</h3>
+                <div class="footer-column">
+                    <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><a href="packages.html#basic">Basic Website</a></li>
-                        <li><a href="packages.html#business">Business Website</a></li>
-                        <li><a href="packages.html#ecommerce">E-commerce Website</a></li>
-                        <li><a href="packages.html#custom">Custom Solutions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100</li>
-                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@techdevsolutions.com</li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Dribbble</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> TechDev Solutions. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2023 TechDev. All rights reserved. Crafted with precision.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/globe.js"></script>
 </body>
 </html>

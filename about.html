@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - TechDev Solutions</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>About Us | TechDev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
+    <!-- Header & Navigation -->
+    <header>
         <div class="container">
-            <nav class="navbar">
+            <nav>
                 <a href="index.html" class="logo">
-                    <span class="logo-icon">💻</span>
-                    <span class="logo-text">TechDev <span class="logo-highlight">Solutions</span></span>
+                    <i class="fas fa-code logo-icon"></i> TechDev
                 </a>
                 
-                <button class="menu-toggle" id="menuToggle">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="customers.html">Customers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <button class="nav-cta">Start a Project</button>
+                
+                <button class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">About Us</a></li>
-                    <li><a href="packages.html" class="nav-link">Packages</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="contact.html#quote" class="btn btn-primary nav-btn">Get Quote</a></li>
-                </ul>
             </nav>
         </div>
     </header>
@@ -38,202 +39,163 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>About <span class="text-highlight">TechDev Solutions</span></h1>
-            <p>Learn more about our mission, our team, and why we're passionate about helping local businesses succeed online.</p>
+            <div class="page-header-content">
+                <h1>About TechDev</h1>
+                <p>We design and build modern, high-performance websites that help businesses establish a strong digital presence, attract customers, and grow with confidence.</p>
+            </div>
         </div>
     </section>
 
-    <!-- About Content -->
-    <section class="section about-content">
+    <!-- Our Story -->
+    <section class="services" style="background-color: var(--black);">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>Our Story</h2>
-                    <p>TechDev Solutions was founded in 2025 with a simple mission: to provide high-quality, affordable websites for local businesses that don't have the budget for large web development agencies.</p>
-                    <p>We noticed that many small businesses were either overpaying for complicated websites they didn't need, or trying to build websites themselves with limited results. We wanted to bridge that gap.</p>
-                    <p>Today, we've helped over 200 local businesses establish their online presence and grow their customer base through professional, effective websites.</p>
-                    
-                    <h2>Our Mission</h2>
-                    <p>To empower local businesses with professional online presence through affordable, high-quality websites that drive growth and customer engagement.</p>
-                    
-                    <h2>Our Values</h2>
-                    <div class="values-list">
-                        <div class="value-item">
-                            <i class="fas fa-handshake"></i>
-                            <div>
-                                <h3>Integrity</h3>
-                                <p>Honest pricing and transparent communication with every client.</p>
-                            </div>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <h3>Partnership</h3>
-                                <p>We work with you, not just for you, to ensure your success.</p>
-                            </div>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <div>
-                                <h3>Innovation</h3>
-                                <p>Staying current with web technologies to deliver the best solutions.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="about-content">
+                <h2 class="section-title">Our Story</h2>
+                <p>Founded in 2020, TechDev began with a simple mission: to create websites that don't just look good, but work effectively for business goals. We noticed that many businesses were stuck with outdated, slow, or confusing websites that didn't reflect their brand or serve their customers.</p>
+                <p>Our approach combines clean design, thoughtful user experience, and reliable technology to create websites that are visually striking, easy to use, and built to perform across all devices. Every project is crafted with attention to detail, speed, and scalability.</p>
+                <p>From concept to launch, we focus on clarity, simplicity, and results. We don't use bloated templates — every site is structured to reflect your brand, message, and audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="floating-cards" style="background-color: var(--dark-gray);">
+        <div class="container">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 80px; font-size: 1.2rem; color: rgba(255,255,255,0.7); max-width: 800px; margin-left: auto; margin-right: auto;">Clear communication, transparency, and quality delivery are at the core of our process.</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Understand</h3>
+                    <p>We start by understanding your goals, brand, and target audience to create a website that truly represents your business.</p>
                 </div>
                 
-                <div class="about-image">
-                    <div class="image-placeholder about-img">
-                        <i class="fas fa-users"></i>
-                    </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Design</h3>
+                    <p>We design a clean, modern layout with premium color palettes, bold typography, and smooth animations.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Build</h3>
+                    <p>Using modern web technologies, we build and optimize your website for performance, speed, and SEO.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Refine</h3>
+                    <p>We review and refine based on your feedback, ensuring every detail meets your expectations.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Deploy</h3>
+                    <p>We deploy your website, set up hosting, and provide support to ensure everything runs smoothly.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="section team">
+    <!-- Design Philosophy -->
+    <section class="services">
         <div class="container">
-            <div class="section-header">
-                <h2>Meet Our <span class="text-highlight">Team</span></h2>
-                <p>The talented people behind TechDev Solutions</p>
+            <div class="about-content">
+                <h2 class="section-title">Design Philosophy</h2>
+                <p>Our websites feature minimal, premium color palettes with bold, confident typography. We create cinematic hero sections with subtle motion and smooth animations and transitions.</p>
+                <p>We draw inspiration from leading global platforms to create modern layouts that are both beautiful and functional. Clean spacing ensures readability and focus, creating a professional, trustworthy look that elevates your brand.</p>
+                <p>The result is a digital experience that not only looks impressive but also guides visitors toward meaningful actions — whether that's making a purchase, filling out a contact form, or exploring your services.</p>
             </div>
             
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
+            <div class="services-grid" style="margin-top: 80px;">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <h3>Tshifhungu Jonathan Matsheketsheke</h3>
-                    <p class="team-role">Founder,Project Manager & Lead Developer</p>
-                    <p>years of web development experience with a passion for helping small businesses.</p>
+                    <h3>Visual Excellence</h3>
+                    <p>Striking designs that capture attention and reflect your brand's personality and values.</p>
                 </div>
                 
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Tshifhiwa Sincere Tshavhungwe</h3>
-                    <p class="team-role">Founder,Manager & Marketer</p>
-                    <p>Brings strategic marketing and business management expertise to TechDev Solutions.</p>
+                    <h3>Performance Focus</h3>
+                    <p>Websites optimized for speed and performance to provide the best user experience.</p>
                 </div>
                 
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Urangani Terrence Mafunzwaini</h3>
-                    <p class="team-role">Frontend,Backend Developer & Tester</p>
-                    <p>Builds, design and Ensures every project runs smoothly and clients are always informed.</p>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Wanga Martin Nethononda</h3>
-                    <p class="team-role">Customer Support,Backend Developer & Tester</p>
-                    <p>Provides ongoing support and helps clients make updates to their websites.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h3 class="stat-number">5+</h3>
-                    <p>Websites Created</p>
-                </div>
-                
-                <div class="stat-card">
-                    <h3 class="stat-number">98%</h3>
-                    <p>Client Satisfaction</p>
-                </div>
-                
-                <div class="stat-card">
-                    <h3 class="stat-number">1</h3>
-                    <p>Local Citiy Served</p>
-                </div>
-                
-                <div class="stat-card">
-                    <h3 class="stat-number">24/7</h3>
-                    <p>Support Available</p>
+                    <h3>Responsive Design</h3>
+                    <p>Perfect functionality across all devices, from desktop to mobile.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta">
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Work With Us?</h2>
-                <p>Contact us today to discuss your website needs and get a free quote.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Contact Us</a>
-                    <a href="packages.html" class="btn btn-secondary btn-large">View Packages</a>
-                </div>
+                <h2 class="cta-title">Let's Create Something Remarkable</h2>
+                <p class="cta-subtitle">Your website is often the first impression of your business. Let's make it count.</p>
+                <button class="cta-button" onclick="window.location.href='contact.html'">
+                    Start Your Project
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <a href="index.html" class="logo footer-logo">
-                        <span class="logo-icon">💻</span>
-                        <span class="logo-text">TechDev <span class="logo-highlight">Solutions</span></span>
-                    </a>
-                    <p>Creating professional, affordable websites for local businesses to help them succeed online.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo">TechDev</a>
+                    <p class="footer-tagline">Crafting premium digital experiences for forward-thinking businesses since 2020.</p>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
+                <div class="footer-column">
+                    <h4>Services</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Web Design</a></li>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">E-Commerce</a></li>
+                        <li><a href="services.html">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="customers.html">Portfolio</a></li>
+                        <li><a href="about.html">Process</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Our Services</h3>
+                <div class="footer-column">
+                    <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><a href="packages.html#basic">Basic Website</a></li>
-                        <li><a href="packages.html#business">Business Website</a></li>
-                        <li><a href="packages.html#ecommerce">E-commerce Website</a></li>
-                        <li><a href="packages.html#custom">Custom Solutions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100</li>
-                        <li><i class="fas fa-phone"></i> 068 133 3036</li>
-                        <li><i class="fas fa-envelope"></i> info@techdevsolutions.com</li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Dribbble</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> TechDev Solutions. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2023 TechDev. All rights reserved. Crafted with precision.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TechDev Solutions</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Contact Us | TechDev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
+    <!-- Header & Navigation -->
+    <header>
         <div class="container">
-            <nav class="navbar">
+            <nav>
                 <a href="index.html" class="logo">
-                    <span class="logo-icon">💻</span>
-                    <span class="logo-text">TechDev <span class="logo-highlight">Solutions</span></span>
+                    <i class="fas fa-code logo-icon"></i> TechDev
                 </a>
                 
-                <button class="menu-toggle" id="menuToggle">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="customers.html">Customers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <button class="nav-cta">Start a Project</button>
+                
+                <button class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="packages.html" class="nav-link">Packages</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                    <li><a href="contact.html#quote" class="btn btn-primary nav-btn">Get Quote</a></li>
-                </ul>
             </nav>
         </div>
     </header>
@@ -38,67 +39,59 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Contact <span class="text-highlight">TechDev Solutions</span></h1>
-            <p>Get in touch with us for a free consultation and quote for your website project.</p>
+            <div class="page-header-content">
+                <h1>Get in Touch</h1>
+                <p>Ready to elevate your digital presence? Let's discuss your project and create something remarkable together.</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section contact">
+    <section class="services" style="background-color: var(--black); padding: 150px 0;">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>We'd love to hear about your project and discuss how we can help your business grow online.</p>
+                    <h2>Let's Start Your Project</h2>
+                    <p>We're here to help you establish a strong digital presence that attracts customers and grows your business with confidence. Tell us about your project, and we'll get back to you within 24 hours.</p>
+                    <p>Whether you need a simple website or a complex e-commerce platform, we'll work with you to create a solution that meets your goals and exceeds your expectations.</p>
                     
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Our Office</h3>
-                                <p>123 Business Ave, Suite 100<br>Your City, State 12345</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@techdev.co.za</p>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Phone Number</h3>
-                                <p>(555) 123-4567</p>
-                                <p>Monday-Friday, 9am-5pm</p>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+27 11 123 4567</p>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Email Address</h3>
-                                <p>info@techdevsolutions.com</p>
-                                <p>We typically respond within 24 hours</p>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Johannesburg, South Africa</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="contact-social">
-                        <h3>Follow Us</h3>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form-container">
-                    <h2>Send Us a Message</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form id="contact-form" class="contact-form">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -115,206 +108,144 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="business">Business Name</label>
-                            <input type="text" id="business" name="business">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
                                 <option value="">Select a service</option>
-                                <option value="starter">Starter Website</option>
-                                <option value="business">Business Website</option>
-                                <option value="ecommerce">E-commerce Website</option>
-                                <option value="custom">Custom Solution</option>
-                                <option value="other">Other</option>
+                                <option value="starter">Starter Website (R2,500)</option>
+                                <option value="business">Business Website (R4,500)</option>
+                                <option value="premium">Premium Website (R7,500)</option>
+                                <option value="ecommerce">E-Commerce Solution</option>
+                                <option value="custom">Custom Project</option>
+                                <option value="consultation">Consultation Only</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="budget">Project Budget (ZAR)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="2k-5k">R2,000 - R5,000</option>
+                                <option value="5k-10k">R5,000 - R10,000</option>
+                                <option value="10k-20k">R10,000 - R20,000</option>
+                                <option value="20k+">R20,000+</option>
+                                <option value="not-sure">Not sure yet</option>
+                            </select>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project, goals, timeline, and any specific requirements..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quote Form Section -->
-    <section class="section quote-form" id="quote">
+    <!-- FAQ Section -->
+    <section class="floating-cards" style="background-color: var(--dark-gray);">
         <div class="container">
-            <div class="section-header">
-                <h2>Get a Free <span class="text-highlight">Quote</span></h2>
-                <p>Fill out this form for a detailed quote on your website project</p>
-            </div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
             
-            <form class="quote-form-details" id="quoteForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="quote-name">Full Name *</label>
-                        <input type="text" id="quote-name" name="quote-name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="quote-email">Email Address *</label>
-                        <input type="email" id="quote-email" name="quote-email" required>
-                    </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>How long does a website project take?</h3>
+                    <p>Timeline depends on the package: Starter (1-2 weeks), Business (2-3 weeks), Premium (3-4 weeks). Complex projects may take longer.</p>
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="quote-business">Business Name *</label>
-                        <input type="text" id="quote-business" name="quote-business" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="quote-industry">Industry *</label>
-                        <select id="quote-industry" name="quote-industry" required>
-                            <option value="">Select your industry</option>
-                            <option value="retail">Retail</option>
-                            <option value="restaurant">Restaurant/Food Service</option>
-                            <option value="professional">Professional Services</option>
-                            <option value="health">Health & Wellness</option>
-                            <option value="home">Home Services</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
+                <div class="service-card">
+                    <h3>Do you provide hosting?</h3>
+                    <p>We can recommend reliable hosting providers and assist with setup. We also offer optional monthly maintenance packages.</p>
                 </div>
                 
-                <div class="form-group">
-                    <label>What features do you need? (Select all that apply)</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature-contact" name="features" value="contact-form">
-                            <label for="feature-contact">Contact Form</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature-gallery" name="features" value="photo-gallery">
-                            <label for="feature-gallery">Photo Gallery</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature-blog" name="features" value="blog">
-                            <label for="feature-blog">Blog/News Section</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature-ecommerce" name="features" value="ecommerce">
-                            <label for="feature-ecommerce">E-commerce/Shopping Cart</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature-booking" name="features" value="booking">
-                            <label for="feature-booking">Appointment Booking</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature-seo" name="features" value="seo">
-                            <label for="feature-seo">SEO Optimization</label>
-                        </div>
-                    </div>
+                <div class="service-card">
+                    <h3>Can you redesign an existing website?</h3>
+                    <p>Yes! We often work with businesses to redesign and modernize their existing websites for better performance and user experience.</p>
                 </div>
                 
-                <div class="form-group">
-                    <label for="quote-timeline">Desired Timeline</label>
-                    <select id="quote-timeline" name="quote-timeline">
-                        <option value="">Select timeline</option>
-                        <option value="asap">As soon as possible</option>
-                        <option value="1month">Within 1 month</option>
-                        <option value="3months">Within 3 months</option>
-                        <option value="flexible">Flexible timeline</option>
-                    </select>
+                <div class="service-card">
+                    <h3>What's included in your packages?</h3>
+                    <p>All packages include design, development, responsive optimization, basic SEO, and deployment. See our Services page for full details.</p>
                 </div>
                 
-                <div class="form-group">
-                    <label for="quote-budget">Estimated Budget</label>
-                    <select id="quote-budget" name="quote-budget">
-                        <option value="">Select budget range</option>
-                        <option value="500">Under R500</option>
-                        <option value="1000">R500 - R1,000</option>
-                        <option value="2000">R1,000 - R2,000</option>
-                        <option value="3000">R2,000 - R3,000</option>
-                        <option value="5000">R3,000 - R5,000</option>
-                        <option value="5000+">Over R5,000</option>
-                    </select>
+                <div class="service-card">
+                    <h3>Do you offer ongoing support?</h3>
+                    <p>Yes, we offer monthly maintenance packages (R300-R600) for updates, security monitoring, and content changes.</p>
                 </div>
                 
-                <div class="form-group">
-                    <label for="quote-details">Additional Details</label>
-                    <textarea id="quote-details" name="quote-details" rows="4" placeholder="Tell us more about your project, your target audience, and any specific requirements you have..."></textarea>
+                <div class="service-card">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept bank transfers, credit cards, and EFT. We require a 50% deposit to start, with the balance due upon completion.</p>
                 </div>
-                
-                <button type="submit" class="btn btn-primary btn-large btn-block">Get Free Quote</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="section map">
+    <!-- Final CTA -->
+    <section class="cta-section">
         <div class="container">
-            <h2>Our Location</h2>
-            <div class="map-container">
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Map would be displayed here with our location</p>
-                </div>
+            <div class="cta-content">
+                <h2 class="cta-title">Your Digital Journey Starts Here</h2>
+                <p class="cta-subtitle">Don't let an outdated website hold your business back. Let's create a digital presence that drives growth and impresses your customers.</p>
+                <button class="cta-button" onclick="window.location.href='#contact-form'">
+                    Get Your Free Quote
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <a href="index.html" class="logo footer-logo">
-                        <span class="logo-icon">💻</span>
-                        <span class="logo-text">TechDev <span class="logo-highlight">Solutions</span></span>
-                    </a>
-                    <p>Creating professional, affordable websites for local businesses to help them succeed online.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo">TechDev</a>
+                    <p class="footer-tagline">Crafting premium digital experiences for forward-thinking businesses since 2020.</p>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
+                <div class="footer-column">
+                    <h4>Services</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Web Design</a></li>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">E-Commerce</a></li>
+                        <li><a href="services.html">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="customers.html">Portfolio</a></li>
+                        <li><a href="about.html">Process</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Our Services</h3>
+                <div class="footer-column">
+                    <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><a href="packages.html#basic">Basic Website</a></li>
-                        <li><a href="packages.html#business">Business Website</a></li>
-                        <li><a href="packages.html#ecommerce">E-commerce Website</a></li>
-                        <li><a href="packages.html#custom">Custom Solutions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100</li>
-                        <li><i class="fas fa-phone"></i> 068 133 3036</li>
-                        <li><i class="fas fa-envelope"></i> info@techdevsolutions.com</li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Dribbble</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> TechDev Solutions. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2023 TechDev. All rights reserved. Crafted with precision.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
