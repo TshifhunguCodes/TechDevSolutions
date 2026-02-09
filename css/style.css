@@ -266,161 +266,236 @@ nav {
 }
 
 /* Floating Cards Section */
+/* ===== FLOATING CARDS SECTION ===== */
+/* ===== FLOATING CARDS SECTION ===== */
 .floating-cards {
     padding: 150px 0;
     background-color: var(--black);
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 
-/* Floating Icons Background */
+/* ===== FLOATING ICONS BACKGROUND ===== */
 .floating-icons-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .icon-bg {
     position: absolute;
-    font-size: 4rem;
-    opacity: 0.1;
-    animation: floatIcon 15s infinite linear;
-    z-index: 0;
+    font-size: 5.5rem; /* Much larger */
+    opacity: 0.35; /* Much higher opacity */
+    animation: floatIcon 25s infinite ease-in-out;
+    z-index: 1;
+    filter: drop-shadow(0 0 15px currentColor);
+    pointer-events: none;
 }
 
-.icon-1 { color: #ff6b6b; top: 15%; left: 5%; animation-delay: 0s; }
-.icon-2 { color: #4ecdc4; top: 25%; right: 10%; animation-delay: -2s; }
-.icon-3 { color: #ffd166; bottom: 20%; left: 15%; animation-delay: -4s; }
-.icon-4 { color: #06d6a0; bottom: 15%; right: 20%; animation-delay: -6s; }
-.icon-5 { color: #118ab2; top: 40%; left: 8%; animation-delay: -8s; }
-.icon-6 { color: #ef476f; top: 60%; right: 5%; animation-delay: -10s; }
-.icon-7 { color: #9d4edd; top: 10%; right: 25%; animation-delay: -12s; }
-.icon-8 { color: #ff9e00; bottom: 40%; left: 25%; animation-delay: -14s; }
+/* Bright, vibrant colors */
+.icon-1 { color: #ff4757; top: 10%; left: 5%; animation-delay: 0s; }
+.icon-2 { color: #2ed573; top: 20%; right: 8%; animation-delay: 3s; }
+.icon-3 { color: #ffa502; bottom: 25%; left: 8%; animation-delay: 6s; }
+.icon-4 { color: #1e90ff; bottom: 15%; right: 12%; animation-delay: 9s; }
+.icon-5 { color: #9c88ff; top: 45%; left: 3%; animation-delay: 12s; }
+.icon-6 { color: #ff6b81; top: 65%; right: 5%; animation-delay: 15s; }
+.icon-7 { color: #00d2d3; top: 15%; right: 20%; animation-delay: 18s; }
+.icon-8 { color: #ff9ff3; bottom: 45%; left: 22%; animation-delay: 21s; }
+
+/* Add more icons for better coverage */
+.icon-9 { color: #ff3838; top: 30%; left: 18%; animation-delay: 24s; }
+.icon-10 { color: #32ff7e; bottom: 30%; right: 25%; animation-delay: 27s; }
+.icon-11 { color: #18dcff; top: 70%; left: 15%; animation-delay: 30s; }
+.icon-12 { color: #7d5fff; top: 35%; right: 30%; animation-delay: 33s; }
 
 @keyframes floatIcon {
     0%, 100% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.08;
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 0.3;
     }
     25% {
-        transform: translateY(-20px) rotate(5deg);
-        opacity: 0.12;
+        transform: translate(40px, -35px) rotate(10deg) scale(1.15);
+        opacity: 0.5;
     }
     50% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.08;
+        transform: translate(-25px, 20px) rotate(-8deg) scale(0.9);
+        opacity: 0.3;
     }
     75% {
-        transform: translateY(20px) rotate(-5deg);
-        opacity: 0.12;
+        transform: translate(35px, 25px) rotate(-12deg) scale(1.1);
+        opacity: 0.5;
     }
 }
 
-/* Content Cards */
+/* ===== SECTION TITLE ===== */
+.section-title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 80px;
+    letter-spacing: -1.5px;
+    opacity: 1; /* Always visible */
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== CONTENT CARDS ===== */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     position: relative;
-    z-index: 1;
-    margin-top: 60px;
+    z-index: 3;
+    margin-top: 80px;
 }
 
 .content-card {
-    background: rgba(26, 26, 26, 0.7);
-    border-radius: 15px;
-    padding: 40px 30px;
+    background: rgba(35, 35, 35, 0.9);
+    border-radius: 20px;
+    padding: 45px 30px;
     text-align: center;
-    transition: var(--transition-smooth);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.content-card.visible {
-    opacity: 1;
-    transform: translateY(0);
+    transition: all 0.4s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    opacity: 1; /* Always visible */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .content-card:hover {
     transform: translateY(-10px);
-    background: rgba(38, 38, 38, 0.8);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(45, 45, 45, 0.95);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
 }
 
 .content-icon {
-    font-size: 3rem;
-    color: var(--white);
-    margin-bottom: 25px;
-    height: 80px;
-    width: 80px;
+    font-size: 4rem;
+    color: white;
+    height: 120px;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 25px;
+    margin: 0 auto 30px;
     border-radius: 50%;
-    background: linear-gradient(145deg, var(--medium-gray), var(--dark-gray));
+    background: linear-gradient(135deg, #ff4757, #1e90ff);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Different colors for each icon */
+.content-card:nth-child(1) .content-icon {
+    background: linear-gradient(135deg, #ff4757, #ff3838);
+}
+
+.content-card:nth-child(2) .content-icon {
+    background: linear-gradient(135deg, #2ed573, #32ff7e);
+}
+
+.content-card:nth-child(3) .content-icon {
+    background: linear-gradient(135deg, #ffa502, #ff9f1a);
+}
+
+.content-card:nth-child(4) .content-icon {
+    background: linear-gradient(135deg, #1e90ff, #18dcff);
+}
+
+.content-card:hover .content-icon {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 .content-card h3 {
-    color: var(--white);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .content-card p {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.6;
-    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-/* Section Title Updates */
-.section-title {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 60px;
-    letter-spacing: -1px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    color: var(--white);
-    position: relative;
-    z-index: 1;
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        margin: 80px auto 0;
+    }
 }
 
-.section-title.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive */
 @media (max-width: 768px) {
     .floating-cards {
         padding: 100px 0;
     }
     
     .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 40px;
+        font-size: 2.8rem;
+        margin-bottom: 60px;
     }
     
     .icon-bg {
-        font-size: 2.5rem;
+        font-size: 4rem;
+        opacity: 0.3;
     }
     
     .cards-container {
         grid-template-columns: 1fr;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 500px;
+        gap: 30px;
+        margin-top: 60px;
+    }
+    
+    .content-card {
+        padding: 40px 25px;
+    }
+    
+    .content-icon {
+        font-size: 3.5rem;
+        height: 100px;
+        width: 100px;
+        margin-bottom: 25px;
+    }
+    
+    .content-card h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-cards {
+        padding: 80px 20px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+    }
+    
+    .icon-bg {
+        font-size: 3rem;
+    }
+    
+    .content-card {
+        padding: 30px 20px;
+    }
+    
+    .content-icon {
+        font-size: 3rem;
+        height: 90px;
+        width: 90px;
     }
 }
 
