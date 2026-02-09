@@ -7,7 +7,7 @@
 
 /* Variables */
 :root {
-    --black: #000000;
+    --black:  #000000;;
     --dark-gray: #111111;
     --medium-gray: #1a1a1a;
     --light-gray: #2a2a2a;
@@ -55,7 +55,7 @@ header {
 }
 
 header.scrolled {
-    background-color: rgba(201, 197, 197, 0.9);
+    background-color: rgba(19, 18, 18, 0.9);
     padding: 20px 0;
     backdrop-filter: blur(10px);
 }
@@ -173,7 +173,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(to bottom, none);
     z-index: 1;
 }
 
