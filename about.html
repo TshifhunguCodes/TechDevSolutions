@@ -3,41 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | TechDev</title>
+    <title>About Us | TechDev - Premium Web Development</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <i class="fas fa-code logo-icon"></i> TechDev
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                
-                <button class="nav-cta">Start a Project</button>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
+      <!-- Header & Navigation -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i> TechDev
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <button class="nav-cta">Build Website</button>
+            
+            <div class="hamburger-menu">
+                <button class="hamburger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    <!-- Page Header -->
+<!-- Mobile Navigation Menu (Hidden by default) -->
+<div class="mobile-nav">
+    <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo">
+            <i class="fas fa-code logo-icon"></i> TechDev
+        </a>
+        <button class="mobile-close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-cta-container">
+            <button class="mobile-nav-cta">Build Website</button>
+        </li>
+    </ul>
+    <div class="mobile-nav-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="mobile-overlay"></div>
+
+<!-- Mobile Navigation Menu (Hidden by default) -->
+<div class="mobile-nav">
+    <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo">
+            <i class="fas fa-code logo-icon"></i> TechDev
+        </a>
+        <button class="mobile-close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-cta-container">
+            <button class="mobile-nav-cta">Build Website</button>
+        </li>
+    </ul>
+    <div class="mobile-nav-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="mobile-overlay"></div>
+
+    <!-- Page Header with Video Hero -->
     <section class="page-header">
+        <!-- Video Container with Placeholder -->
+        <div class="page-header-video-container">
+            <video class="page-header-video" autoplay muted loop playsinline poster="https://via.placeholder.com/1920x1080/1a1a1a/6ee7b7?text=Video+Background">
+                <source src="/assets/videos/about-hero-video.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="https://via.placeholder.com/1920x1080/1a1a1a/6ee7b7?text=About+TechDev+-+Add+Your+Video+Here" alt="Video Placeholder" class="page-header-video-fallback">
+            </video>
+            <div class="page-header-overlay"></div>
+            <!-- Video Placeholder Notice -->
+            <div class="video-placeholder-notice">
+                <i class="fas fa-video"></i> Add your video: /assets/videos/about-hero.mp4
+            </div>
+        </div>
+        
+        <!-- 3D/4D Elements will be added by JavaScript -->
+        
         <div class="container">
             <div class="page-header-content">
                 <h1>About TechDev</h1>
@@ -51,9 +132,83 @@
         <div class="container">
             <div class="about-content">
                 <h2 class="section-title">Our Story</h2>
-                <p>Founded in 2020, TechDev began with a simple mission: to create websites that don't just look good, but work effectively for business goals. We noticed that many businesses were stuck with outdated, slow, or confusing websites that didn't reflect their brand or serve their customers.</p>
+                <p>Founded in 2025, TechDev began with a simple mission: to create websites that don't just look good, but work effectively for business goals. We noticed that many businesses were stuck with outdated, slow, or confusing websites that didn't reflect their brand or serve their customers.</p>
                 <p>Our approach combines clean design, thoughtful user experience, and reliable technology to create websites that are visually striking, easy to use, and built to perform across all devices. Every project is crafted with attention to detail, speed, and scalability.</p>
                 <p>From concept to launch, we focus on clarity, simplicity, and results. We don't use bloated templates — every site is structured to reflect your brand, message, and audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders-section">
+        <div class="container">
+            <h2 class="section-title">Meet the Founders</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: rgba(255,255,255,0.8);">Passionate developers and designers dedicated to crafting exceptional digital experiences.</p>
+            
+            <div class="founders-grid">
+                <!-- Founder 1 -->
+                <div class="founder-card">
+                    <div class="founder-image-container">
+                        <div class="founder-image-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                            <!-- Image placeholder - replace src with actual image path -->
+                            <img src="/assets/images/pic1.jpg" alt="Tshifhungu Jonathan Matsheketsheke" class="founder-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        </div>
+                    </div>
+                    <h3 class="founder-name">Tshifhungu Jonathan Matsheketsheke</h3>
+                    <p class="founder-title">Co-Founder & Lead Developer</p>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Full-stack developer with years of experience in building scalable web applications and leading development teams.</p>
+                    
+                    <div class="founder-tags">
+                        <span class="founder-tag">JavaScript</span>
+                        <span class="founder-tag">HTML</span>
+                        <span class="founder-tag">CSS</span>
+                        <span class="founder-tag">Python</span>
+                        <span class="founder-tag">MongoDB</span>
+                        <span class="founder-tag">SQL</span>
+                    </div>
+                    
+                    <div class="founder-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- Founder 2 -->
+                <div class="founder-card">
+                    <div class="founder-image-container">
+                        <div class="founder-image-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                            <!-- Image placeholder - replace src with actual image path -->
+                            <img src="/assets/images/pic2.jpg" alt="Tshifhiwa Sincere Tshavhungwe" class="founder-image" onerror="this.style.display='none'; this.previousElementSibling.style.display='flex';">
+                        </div>
+                    </div>
+                    <h3 class="founder-name">Tshifhiwa Sincere Tshavhungwe</h3>
+                    <p class="founder-title">Co-Founder & Creative Director</p>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Best UI/UX designer specializing in creating intuitive, beautiful interfaces that users love and businesses trust.</p>
+                    
+                    <div class="founder-tags">
+                        <span class="founder-tag">UI/UX Design</span>
+                        <span class="founder-tag">Figma</span>
+                        <span class="founder-tag">Manager</span>
+                        <span class="founder-tag">Brand Strategy</span>
+                        <span class="founder-tag">Marketing</span>
+                    </div>
+                    
+                    <div class="founder-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image placeholder instruction -->
+            <div style="text-align: center; margin-top: 30px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+                <i class="fas fa-info-circle"></i> Replace image paths: /assets/images/founder-jonathan.jpg and /assets/images/founder-tshifhiwa.jpg with your actual images
             </div>
         </div>
     </section>
@@ -156,7 +311,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <a href="index.html" class="footer-logo">TechDev</a>
-                    <p class="footer-tagline">Crafting premium digital experiences for forward-thinking businesses since 2020.</p>
+                    <p class="footer-tagline">Crafting premium digital experiences for forward-thinking businesses since 2020. Based in South Africa.</p>
                 </div>
                 
                 <div class="footer-column">
@@ -173,8 +328,7 @@
                     <h4>Company</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="customers.html">Portfolio</a></li>
-                        <li><a href="about.html">Process</a></li>
+                        <li><a href="services.html">Our Services</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -182,20 +336,21 @@
                 <div class="footer-column">
                     <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Dribbble</a></li>
+                        <li><a href="#"><i class="fab fa-instagram" style="margin-right: 8px;"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin" style="margin-right: 8px;"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-twitter" style="margin-right: 8px;"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-github" style="margin-right: 8px;"></i> GitHub</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 TechDev. All rights reserved. Crafted with precision.</p>
+                <p>&copy; 2025 TechDev. All rights reserved. Crafted with precision in South Africa.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>

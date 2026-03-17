@@ -8,48 +8,82 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    
     <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <i class="fas fa-code logo-icon"></i> TechDev
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                
-                <button class="nav-cta">Start a Project</button>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i> TechDev
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <button class="nav-cta">Build Website</button>
+            
+            <div class="hamburger-menu">
+                <button class="hamburger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Mobile Navigation Menu (Hidden by default) -->
+<div class="mobile-nav">
+    <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo">
+            <i class="fas fa-code logo-icon"></i> TechDev
+        </a>
+        <button class="mobile-close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-cta-container">
+            <button class="mobile-nav-cta">Build Website</button>
+        </li>
+    </ul>
+    <div class="mobile-nav-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="mobile-overlay"></div>
 
     <!-- Hero Section with Full-Screen Video -->
     <section class="hero">
         <div class="hero-video-container">
             <div class="hero-video-overlay"></div>
             <video class="hero-video" autoplay muted loop playsinline>
-                <source src="/assets/videos/14522339_3840_2160_25fps.mp4" type="video/mp4">
+                <source src="/assets/videos/home-hero-video.mp4" type="video/mp4">
             </video>
         </div>
         
         <div class="hero-content">
-            <h1>Crafting Digital Experiences for Modern Businesses</h1>
+            <h1>Crafting Professional Websites For Businesses</h1>
             <p>We design and develop premium websites that elevate your brand, engage your audience, and drive measurable results.</p>
             <a href="contact.html" class="hero-cta">
-                Start Your Project
+                Create Your Website
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
@@ -111,38 +145,49 @@
     </div>
 </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
+<!-- Services Section with 4D Animation Elements -->
+<section class="services" id="services">
+    <!-- 4D Animation Elements - These will be added by JavaScript -->
+    <!-- No need to add manually as JS will create them -->
+    
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Premium Web Design</h3>
+                <p>Custom, visually stunning designs that reflect your brand identity and create memorable user experiences. We create modern layouts inspired by leading global platforms.</p>
+            </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Premium Web Design</h3>
-                    <p>Custom, visually stunning designs that reflect your brand identity and create memorable user experiences. We create modern layouts inspired by leading global platforms.</p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>High-performance, responsive websites built with modern technologies and optimized for speed and SEO. We ensure your site works perfectly across all devices.</p>
+                <h3>Web Development</h3>
+                <p>High-performance, responsive websites built with modern technologies and optimized for speed and SEO. We ensure your site works perfectly across all devices.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shopping-cart"></i>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                       
-                    </div>
-                    <h3>E-Commerce Solutions</h3>
-                    <p>Full-featured online stores with secure payment processing, inventory management, and conversion optimization to grow your online business.</p>
-                </div>
+                <h3>E-Commerce Solutions</h3>
+                <p>Full-featured online stores with secure payment processing, inventory management, and conversion optimization to grow your online business.</p>
             </div>
         </div>
-    </section>
+        
+        <!-- Button Container -->
+        <div class="btn-container">
+            <a href="services.html" class="btn-services">
+                View All Services
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- 3D Particle Globe Section -->
     <section class="globe-section" id="global">
@@ -173,18 +218,44 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Elevate Your Digital Presence?</h2>
-                <p class="cta-subtitle">Your website is often the first impression of your business. Let's create something remarkable together.</p>
-                <button class="cta-button">
-                    Book a Consultation
-                    <i class="fas fa-calendar-alt"></i>
-                </button>
-            </div>
+    <!-- CTA Section -->
+<section class="cta-section" id="contact">
+    <!-- 3D Animated Elements -->
+    <div class="cube cube-1"></div>
+    <div class="cube cube-2"></div>
+    <div class="cube cube-3"></div>
+    <div class="cube cube-4"></div>
+    <div class="cube cube-5"></div>
+    <div class="cube cube-6"></div>
+    
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+    
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+    <div class="particle particle-7"></div>
+    <div class="particle particle-8"></div>
+    
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Elevate Your Digital Presence?</h2>
+            <p class="cta-subtitle">Your website is often the first impression of your business. Let's create something remarkable together.</p>
+            <button class="cta-button">
+                Book a Consultation
+                <i class="fas fa-calendar-alt"></i>
+            </button>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -210,7 +281,6 @@
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="customers.html">Customers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>

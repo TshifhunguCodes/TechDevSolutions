@@ -3,41 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | TechDev</title>
+    <title>Contact Us | TechDev - Premium Web Development</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <i class="fas fa-code logo-icon"></i> TechDev
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                
-                <button class="nav-cta">Start a Project</button>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
+    <!-- Header & Navigation -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i> TechDev
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <button class="nav-cta">Build Website</button>
+            
+            <div class="hamburger-menu">
+                <button class="hamburger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    <!-- Page Header -->
+<!-- Mobile Navigation Menu (Hidden by default) -->
+<div class="mobile-nav">
+    <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo">
+            <i class="fas fa-code logo-icon"></i> TechDev
+        </a>
+        <button class="mobile-close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-cta-container">
+            <button class="mobile-nav-cta">Build Website</button>
+        </li>
+    </ul>
+    <div class="mobile-nav-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="mobile-overlay"></div>
+
+    <!-- Page Header with Video Hero -->
     <section class="page-header">
+        <!-- 3D/4D Elements will be added by JavaScript -->
         <div class="container">
             <div class="page-header-content">
                 <h1>Get in Touch</h1>
@@ -152,33 +188,33 @@
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="faq-grid">
+                <div class="faq-card">
                     <h3>How long does a website project take?</h3>
                     <p>Timeline depends on the package: Starter (1-2 weeks), Business (2-3 weeks), Premium (3-4 weeks). Complex projects may take longer.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="faq-card">
                     <h3>Do you provide hosting?</h3>
                     <p>We can recommend reliable hosting providers and assist with setup. We also offer optional monthly maintenance packages.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="faq-card">
                     <h3>Can you redesign an existing website?</h3>
                     <p>Yes! We often work with businesses to redesign and modernize their existing websites for better performance and user experience.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="faq-card">
                     <h3>What's included in your packages?</h3>
                     <p>All packages include design, development, responsive optimization, basic SEO, and deployment. See our Services page for full details.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="faq-card">
                     <h3>Do you offer ongoing support?</h3>
                     <p>Yes, we offer monthly maintenance packages (R300-R600) for updates, security monitoring, and content changes.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="faq-card">
                     <h3>What payment methods do you accept?</h3>
                     <p>We accept bank transfers, credit cards, and EFT. We require a 50% deposit to start, with the balance due upon completion.</p>
                 </div>
@@ -206,7 +242,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <a href="index.html" class="footer-logo">TechDev</a>
-                    <p class="footer-tagline">Crafting premium digital experiences for forward-thinking businesses since 2020.</p>
+                    <p class="footer-tagline">Crafting premium digital experiences for forward-thinking businesses since 2020. Based in South Africa.</p>
                 </div>
                 
                 <div class="footer-column">
@@ -215,7 +251,7 @@
                         <li><a href="services.html">Web Design</a></li>
                         <li><a href="services.html">Web Development</a></li>
                         <li><a href="services.html">E-Commerce</a></li>
-                        <li><a href="services.html">Brand Strategy</a></li>
+                        <li><a href="services.html">Hosting Solutions</a></li>
                     </ul>
                 </div>
                 
@@ -223,8 +259,8 @@
                     <h4>Company</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Our Process</a></li>
                         <li><a href="customers.html">Portfolio</a></li>
-                        <li><a href="about.html">Process</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -232,20 +268,21 @@
                 <div class="footer-column">
                     <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Dribbble</a></li>
+                        <li><a href="#"><i class="fab fa-instagram" style="margin-right: 8px;"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin" style="margin-right: 8px;"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-twitter" style="margin-right: 8px;"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 TechDev. All rights reserved. Crafted with precision.</p>
+                <p>&copy; 2025 TechDev. All rights reserved. Crafted with precision in South Africa.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
