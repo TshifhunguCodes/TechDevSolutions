@@ -234,15 +234,38 @@ window.addEventListener('load', () => {
         }
     }
     
-    // Video fallback for mobile
+    // Hero video: try to play everywhere, and only fall back if playback fails.
     const heroVideo = document.querySelector('.hero-video');
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     
-    if (isMobile && heroVideo) {
-        heroVideo.style.display = 'none';
+    if (heroVideo) {
         const videoContainer = document.querySelector('.hero-video-container');
+
+        const showVideoFallback = () => {
+            heroVideo.style.opacity = '0';
+            if (videoContainer) {
+                videoContainer.style.background = 'url("assets/images/pic3.jpg") center/cover no-repeat';
+            }
+        };
+
+        heroVideo.muted = true;
+        heroVideo.setAttribute('muted', '');
+        heroVideo.setAttribute('playsinline', '');
+        heroVideo.setAttribute('webkit-playsinline', '');
+
+        heroVideo.addEventListener('error', showVideoFallback);
+
+        const playPromise = heroVideo.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch(() => {
+                showVideoFallback();
+            });
+        }
+
         if (videoContainer) {
-            videoContainer.style.background = 'url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80") center/cover no-repeat';
+            heroVideo.addEventListener('loadeddata', () => {
+                videoContainer.style.background = 'none';
+                heroVideo.style.opacity = '1';
+            }, { once: true });
         }
     }
     
