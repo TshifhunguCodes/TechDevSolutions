@@ -42,7 +42,7 @@
             
             // Add your video source
             const source = document.createElement('source');
-            source.src = '/assets/videos/contact-hero.mp4';
+            source.src = 'assets/videos/contact-background.mp4';
             source.type = 'video/mp4';
             
             // Fallback image
