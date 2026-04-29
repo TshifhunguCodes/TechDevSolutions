@@ -1,3 +1,8 @@
+// Initialize EmailJS
+(function() {
+    emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // Replace with your EmailJS public key
+})();
+
 // Header scroll effect
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
@@ -274,24 +279,62 @@ window.addEventListener('load', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
-            
+
             // Simple validation
             if (!name || !email || !message) {
                 alert('Please fill in all required fields.');
                 return;
             }
-            
-            // Show success message (in a real app, you would send this to a server)
-            alert(`Thank you ${name}! We have received your message about ${service}. We will contact you at ${email} within 24 hours.`);
-            
-            // Reset form
-            contactForm.reset();
+
+            // Disable submit button and show loading
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            // EmailJS configuration
+            const serviceID = 'YOUR_EMAILJS_SERVICE_ID'; // Replace with your EmailJS service ID
+            const templateID = 'YOUR_EMAILJS_TEMPLATE_ID'; // Replace with your EmailJS template ID
+            const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY'; // Replace with your EmailJS public key
+
+            // Prepare email parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                phone: phone || 'Not provided',
+                service: service,
+                message: message,
+                to_email: 'sincere_outline@hotmail.com'
+            };
+
+            // Send email using EmailJS
+            emailjs.send(serviceID, templateID, templateParams, publicKey)
+                .then(function(response) {
+                    console.log('Email sent successfully!', response.status, response.text);
+                    alert(`Thank you ${name}! Your message has been sent successfully. We will contact you at ${email} within 24 hours.`);
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // Restore button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                })
+                .catch(function(error) {
+                    console.error('Email sending failed:', error);
+                    alert('Sorry, there was an error sending your message. Please try again or contact us directly at sincere_outline@hotmail.com');
+
+                    // Restore button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     }
 });

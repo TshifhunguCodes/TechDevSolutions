@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/contact.css">
 
+    <!-- EmailJS for contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
         <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon_io (1)/">
@@ -158,24 +160,12 @@
                             <label for="service">Service Interested In *</label>
                             <select id="service" name="service" required>
                                 <option value="">Select a service</option>
-                                <option value="starter">Starter Website (R2,500)</option>
-                                <option value="business">Business Website (R4,500)</option>
-                                <option value="premium">Premium Website (R7,500)</option>
+                                <option value="starter">Starter Website</option>
+                                <option value="business">Business Website</option>
+                                <option value="premium">Premium Website</option>
                                 <option value="ecommerce">E-Commerce Solution</option>
                                 <option value="custom">Custom Project</option>
                                 <option value="consultation">Consultation Only</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="budget">Project Budget (ZAR)</label>
-                            <select id="budget" name="budget">
-                                <option value="">Select budget range</option>
-                                <option value="2k-5k">R2,000 - R5,000</option>
-                                <option value="5k-10k">R5,000 - R10,000</option>
-                                <option value="10k-20k">R10,000 - R20,000</option>
-                                <option value="20k+">R20,000+</option>
-                                <option value="not-sure">Not sure yet</option>
                             </select>
                         </div>
                         
@@ -222,7 +212,7 @@
                 
                 <div class="faq-card">
                     <h3>Do you offer ongoing support?</h3>
-                    <p>Yes, we offer monthly maintenance packages (R300-R600) for updates, security monitoring, and content changes.</p>
+                    <p>Yes, we offer monthly maintenance packages for updates, security monitoring, and content changes.</p>
                 </div>
                 
                 <div class="faq-card">
