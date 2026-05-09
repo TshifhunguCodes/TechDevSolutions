@@ -360,6 +360,7 @@ body.menu-open {
     position: relative;
     overflow: hidden;
     margin-top: 0;
+    padding-top: 80px;
     isolation: isolate;
 }
 
@@ -636,8 +637,8 @@ body.menu-open {
 
 .founders-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 60px;
     margin-top: 80px;
     position: relative;
     z-index: 10;
@@ -647,7 +648,7 @@ body.menu-open {
     background: rgba(30, 30, 30, 0.7);
     backdrop-filter: blur(15px);
     border-radius: 40px;
-    padding: 40px;
+    padding: 50px 40px 40px;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -694,43 +695,43 @@ body.menu-open {
     opacity: 1;
 }
 
-/* Founder Image Container with placeholder */
+/* Founder Image Container - Square with sharp edges */
 .founder-image-container {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
     margin: 0 auto 30px;
-    border-radius: 50%;
     overflow: hidden;
-    padding: 4px;
+    padding: 5px;
     background: linear-gradient(135deg, var(--accent), var(--white));
     position: relative;
     box-shadow: 0 20px 40px -10px rgba(110,231,183,0.4);
     animation: founderImagePulse 3s ease-in-out infinite;
+    border-radius: 0;
 }
 
 .founder-image-placeholder {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    border-radius: 0;
 }
 
 /* Actual image styling */
 .founder-image {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
     transition: all 0.5s ease;
+    border-radius: 0;
 }
 
 .founder-placeholder-content {
@@ -808,9 +809,21 @@ body.menu-open {
 .founder-title {
     font-size: 1.1rem;
     color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+/* Professional bio styling */
+.founder-bio {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 300;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .founder-tags {
@@ -818,7 +831,7 @@ body.menu-open {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    margin: 25px 0;
+    margin: 25px 0 0;
 }
 
 .founder-tag {
@@ -837,34 +850,6 @@ body.menu-open {
     color: var(--black);
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 20px -5px rgba(110,231,183,0.4);
-}
-
-.founder-social {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-.founder-social a {
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.1rem;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.founder-social a:hover {
-    background: var(--accent);
-    color: var(--black);
-    transform: translateY(-8px) rotateY(180deg);
-    box-shadow: 0 15px 30px -10px var(--accent);
 }
 
 /* Process Steps */
@@ -922,7 +907,6 @@ body.menu-open {
 }
 
 .step-number {
-    display: inline-block;
     width: 70px;
     height: 70px;
     background: linear-gradient(135deg, var(--accent), #a8e6cf);
@@ -1123,7 +1107,7 @@ body.menu-open {
 /* Mobile Responsive */
 @media (max-width: 1200px) {
     .founders-grid {
-        gap: 30px;
+        gap: 40px;
     }
 }
 
@@ -1140,6 +1124,12 @@ body.menu-open {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .founder-image-container {
+        width: 220px;
+        height: 220px;
     }
 }
 
@@ -1190,8 +1180,8 @@ body.menu-open {
     }
     
     .founder-image-container {
-        width: 160px;
-        height: 160px;
+        width: 200px;
+        height: 200px;
     }
     
     .founder-name {
@@ -1234,14 +1224,8 @@ body.menu-open {
     }
     
     .founder-image-container {
-        width: 140px;
-        height: 140px;
-    }
-    
-    .founder-social a {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
+        width: 180px;
+        height: 180px;
     }
     
     .image-instruction {

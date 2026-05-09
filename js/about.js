@@ -204,17 +204,6 @@
                 });
             });
 
-            // Social icon effects
-            const socialLinks = card.querySelectorAll('.founder-social a');
-            socialLinks.forEach(link => {
-                link.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-8px) rotateY(180deg)';
-                });
-                
-                link.addEventListener('mouseleave', function() {
-                    this.style.transform = '';
-                });
-            });
         });
     }
 
@@ -308,8 +297,7 @@
                     transform: translateY(-5px) !important;
                 }
                 
-                .founder-tag:hover,
-                .founder-social a:hover {
+                .founder-tag:hover {
                     transform: none !important;
                 }
             `;
